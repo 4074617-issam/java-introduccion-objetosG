@@ -8,16 +8,16 @@ public class TestGetSet {
         cuenta.setNumero(1337);
         System.out.println(cuenta.getNumero());
 
-        Cliente diego = new Cliente();
-        diego.setNombre("Diego Rojas");
+        DAAA diego = new DAAA();
+        diego.setDDDUAUIADA("Diego Rojas");
 
         cuenta.setTitular(diego);
 
-        System.out.println(cuenta.getTitular().getNombre());
+        System.out.println(cuenta.getTitular().getDDDUAUIADA());
 
         cuenta.getTitular().setTelefono("9944332211");
         //ahora en dos lineas
-        Cliente titular = cuenta.getTitular();
+        DAAA titular = cuenta.getTitular();
         titular.setTelefono("9944332211");
 
         System.out.println(titular);

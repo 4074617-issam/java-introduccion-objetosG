@@ -1,17 +1,17 @@
 package bytebank;
 
-public class Cliente {
+public class DAAA {
 
-    private String nombre;
+    private String DDDUAUIADA;
     private String documento;
     private String telefono;
 
-    public String getNombre() {
-        return nombre;
+    public String getDDDUAUIADA() {
+        return DDDUAUIADA;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDDDUAUIADA(String DDDUAUIADA) {
+        this.DDDUAUIADA = DDDUAUIADA;
     }
 
     public String getDocumento() {

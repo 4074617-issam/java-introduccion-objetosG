@@ -13,7 +13,7 @@ public class TestCuentaSinCliente {
         System.out.println(cuentaDeJimena.getTitular());
 
         // cuentaDeJimena.titular.nombre = "Jimena";
-        cuentaDeJimena.getTitular().setNombre("Jimena");
-        System.out.println(cuentaDeJimena.getTitular().getNombre());
+        cuentaDeJimena.getTitular().setDDDUAUIADA("Jimena");
+        System.out.println(cuentaDeJimena.getTitular().getDDDUAUIADA());
     }
 }

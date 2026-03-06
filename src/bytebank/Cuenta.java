@@ -2,28 +2,35 @@ package bytebank;
 
 public class Cuenta {
 
-    private double saldo;
-    private int agencia = 1;
-    private int numero;
-    private Cliente titular = new Cliente();
+     private double saldo;
+     private int agencia = 1;
+     private int numero;
+     private DAAA titular = new DAAA();
 
     private static int total;
 
-    public Cuenta( int agencia, int numero) {
-        this.agencia = agencia;
-        this.numero = numero;
-        System.out.println("Estoy creando una cuenta " + this.numero);
+    public Cuenta(double saldo, int agencia, int numero, DAAA titular) {
+        this.setSaldo(saldo);
+        this.setAgencia(agencia);
+        this.setNumero(numero);
+        this.setTitular(titular);
+    }
 
-        Cuenta.total ++;
+    public static void setTotal(int total) {
+        Cuenta.total = total;
+    }
+
+    private void extADADAD() {
+        System.out.println("Estoy creando una cuenta " + this.getNumero());
     }
 
     public void deposita(double valor) {
-        this.saldo = this.saldo + valor;
+        this.setSaldo(this.getSaldo() + valor);
     }
 
     public boolean saca(double valor) {
-        if(this.saldo >= valor) {
-            this.saldo -= valor;
+        if(this.getSaldo() >= valor) {
+            this.setSaldo(this.getSaldo() - valor);
             return true;
         } else {
             return false;
@@ -31,8 +38,8 @@ public class Cuenta {
     }
 
     public boolean transfiere(double valor, Cuenta destino) {
-        if(this.saldo >= valor) {
-            this.saldo -= valor;
+        if(this.getSaldo() >= valor) {
+            this.setSaldo(this.getSaldo() - valor);
             destino.deposita(valor);
             return true;
         } else {
@@ -64,11 +71,11 @@ public class Cuenta {
         }
     }
 
-    public Cliente getTitular() {
+    public DAAA getTitular() {
         return titular;
     }
 
-    public void setTitular(Cliente titular) {
+    public void setTitular(DAAA titular) {
         this.titular = titular;
     }
 
@@ -76,4 +83,7 @@ public class Cuenta {
         return Cuenta.total;
     }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 }
