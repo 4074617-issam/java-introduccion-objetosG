@@ -1,5 +1,12 @@
 package bytebank;
 
+/**
+ * Clase que representa una cuenta bancaria
+ *
+ * @author iSAAM
+ *
+ * @version 1.0
+ */
 public class Cuenta {
 
      private double saldo;
@@ -37,6 +44,12 @@ public class Cuenta {
         }
     }
 
+    /**
+     * Transfiere dinero de una cuenta a otra
+     * @param valor
+     * @param destino
+     * @return
+     */
     public boolean transfiere(double valor, Cuenta destino) {
         if(this.getSaldo() >= valor) {
             this.setSaldo(this.getSaldo() - valor);
